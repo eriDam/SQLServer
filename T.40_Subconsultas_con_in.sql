@@ -3,9 +3,13 @@ Tutoriales SQL SERVER #40 | Subconsultas con in & not in
  
 */
 
-Select * from Carrera
-Select * from alumno
-Select * from Datos
+Select * from libros
 
-Select * from Carrera where Carrera.Id_carrera =
-				 (Select Id_carrera from alumno where Id_Carrera=13)
+Select * from libros where id_libro =
+				 (Select id_libro from libros where nombre='100 años de soledad')
+
+Select * from libros where id_libro in (2,4,6)
+Select * from libros where id_libro not in (2,4,6)
+
+Select * from libros where id_libro not in
+				 (Select id_libro from libros where precio_venta > 168)
