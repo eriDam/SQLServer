@@ -2,7 +2,8 @@
 Tutoriales SQL Server#31 y 32 |  Inner Join
 - Consulta de unión de diferentes tablas.
 - El INNER JOIN es otro tipo de composición de tablas, permite emparejar 
- filas de distintas tablas de forma más eficiente que con el producto cartesiano cuando una de las columnas de emparejamiento está indexada.
+ filas de distintas tablas de forma más eficiente que con el producto 
+ cartesiano cuando una de las columnas de emparejamiento está indexada.
 */
 
 Select * from alumno

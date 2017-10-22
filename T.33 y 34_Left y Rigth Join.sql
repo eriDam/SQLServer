@@ -27,3 +27,9 @@ left JOIN  Datos D on A.ID_ALUMNO = D.ID_ALUMNO
 --Los registros  los obtengo de la tabla derecha
  select  * from Datos D
 RIGHT JOIN  ALUMNO A on D.ID_ALUMNO = A.ID_ALUMNO
+
+
+---------------------------
+
+SELECT * FROM Datos right join Alumno on Datos.Id_Alumno=Alumno.id_alumno
+where Alumno.Id_carrera=12

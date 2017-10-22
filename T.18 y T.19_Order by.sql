@@ -3,7 +3,8 @@ Tutoriales SQL Server#18 y T.19| Order by
  
  
 */
- 
+ USE libreria2;
+
  select titulo from libros
 order by titulo;
 

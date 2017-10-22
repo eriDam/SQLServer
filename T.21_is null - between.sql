@@ -15,7 +15,7 @@ where not nombre is null;
 
 --Between (entre los valores) misma forma de hacer una consulta
 Select * from libros
-Where precio_venta > 200 and precio_venta < 300:
+Where precio_venta > 200 and precio_venta < 300;
 
 Select * from libros
 Where precio_venta between 200 and 300;
