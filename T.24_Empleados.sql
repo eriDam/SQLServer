@@ -1,7 +1,8 @@
 create database empleados
+GO
 use empleados;
 
-
+GO
 create table usuarios
 (
 id_usuario int identity primary key,
@@ -12,7 +13,7 @@ tipo_usuario varchar(10) not null,
 edad int not null,
 sexo varchar(20) not null
 )
-
+GO
 
 insert into usuarios values('david','dav26','sdddd','registrado',22,'M');
 insert into usuarios values('janeth','jan71','3e2d','registrado',23,'F');
@@ -48,3 +49,4 @@ insert into usuarios values('tatiana','tat46','6byh5bdv','registrado',21,'F');
 insert into usuarios values('carola','car23','hmnjft','registrado',23,'F');
 insert into usuarios values('jesus','jes11','gdct','registrado',25,'M');
 insert into usuarios values('david','dav22','ef5v5','super_admin',24,'M');
+GO
