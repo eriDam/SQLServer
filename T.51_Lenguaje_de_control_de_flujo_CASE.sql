@@ -1,6 +1,6 @@
 /*
 Tutoriales SQL SERVER |  #51  Lenguaje de Control de flujo [CASE]
-
+https://www.youtube.com/watch?v=anaEKG-1-_A&index=52&list=PL6hPvfzEEMDaU4aiS389oXamdN8sip856
 CASE
 
 
