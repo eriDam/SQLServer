@@ -9,10 +9,16 @@ Tutoriales SQL SERVER |  #64 Triggers[Insert]
  -- sentencias
 */
 
-
+select * from TablaTotales-- vacía aún
 select * from TablaAlmacen
 select * from TablaVentas join TablaAlmacen 
 on TablaVentas.id_producto = TablaAlmacen.id_producto
+
+--Hago primero un insert en la tabla totales para luego poder hacer el update (en el curso no está el script)
+declare @total int --Declaramos una variable int
+	set @total = (select sum(cantidad) from TablaVentas) --obtenemos la suma de las cantidades y lo asignamos a la variable como nuestro total de ventas
+	insert into TablaTotales values (@total)
+	;
 
 --Creacion trigger--
 create trigger InsertarVenta --Asignamos un nombre al trigger
@@ -21,8 +27,8 @@ for insert --Despues de insertar en la TablaVentas
 as
 begin --Comienza las sentencias
 	declare @total int --Declaramos una variable int
-	set @total = (select sum(cantidad) from TablaVentas) --obtenemos la suma de las cantidades y lo asignamos a la variable
-	update TablaTotales --hacemos un update a lña tabla totales
+	set @total = (select sum(cantidad) from TablaVentas) --obtenemos la suma de las cantidades y lo asignamos a la variable como nuestro total de ventas
+	update TablaTotales --hacemos un update a la tabla totales
 	set TablaTotales.cantidad = @total 
 end --finalizan las sentecias
 		--fin Trigger--
@@ -32,4 +38,7 @@ end --finalizan las sentecias
 	select * from TablaTotales
 
 --insertamos un registro
-insert into TablaVentas values(2,20)
+insert into TablaVentas values(2,10)
+ 
+	select * from TablaVentas
+	select * from TablaTotales
